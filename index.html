@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f4ee">
+  <title>Empathy Villa</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">EMPATHY VILLA</div>
+      <button class="menu" aria-label="Open menu">☰</button>
+      <div class="nav-links">
+        <a href="#welcome">Welcome</a>
+        <a href="#wifi">Wi-Fi</a>
+        <a href="#villa">Villa</a>
+        <a href="#help">Help</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">YOUR PRIVATE VILLA GUIDE</p>
+      <h1>Welcome to<br><em>Empathy Villa</em></h1>
+      <p class="subtitle">Everything you need for a comfortable stay, in one place.</p>
+      <a class="button" href="#welcome">Explore the villa</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="welcome" class="section intro">
+      <div>
+        <p class="eyebrow">WELCOME HOME</p>
+        <h2>Make yourself at home.</h2>
+      </div>
+      <p>
+        This is your personal guide to Empathy Villa. Here you can find
+        instructions for the Wi-Fi, air conditioning, kitchen, TV and other
+        useful things around the house.
+      </p>
+    </section>
+
+    <section id="wifi" class="section card-section">
+      <div class="info-card wifi-card">
+        <div class="icon">⌁</div>
+        <p class="eyebrow">CONNECT</p>
+        <h2>Wi-Fi</h2>
+        <p class="muted">Empathy Villa has two Wi-Fi networks. Choose the one you prefer.</p>
+
+        <div class="wifi-box">
+          <div><span>Network 01</span><strong>HATA_BOBRA</strong></div>
+          <div><span>Network 02</span><strong>GlobalXtreme</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="villa" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">AT EMPATHY VILLA</p>
+        <h2>Everything you need.</h2>
+      </div>
+
+      <div class="guide-grid">
+        <button class="guide-card" data-modal="ac" type="button">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 14h28M10 22h28M10 30h18M10 38h10"/><path d="M34 30c0 4-2 7-6 8"/><circle cx="37" cy="14" r="2"/></svg>
+          </div>
+          <span>01</span><h3>Air conditioning</h3>
+          <p>Midea AC · 20°C recommended</p>
+          <b class="learn">Open guide →</b>
+        </button>
+
+        <button class="guide-card" data-modal="kitchen" type="button">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 20h30v19H9z"/><path d="M13 20V9h22v11M16 26h5M28 26h5M16 32h5M28 32h5"/><path d="M39 11v8M35 15h8"/></svg>
+          </div>
+          <span>02</span><h3>Kitchen</h3>
+          <p>Cooler · washing machine · stove · cooking</p>
+          <b class="learn">Open guide →</b>
+        </button>
+
+        <button class="guide-card" data-modal="tv" type="button">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="23" rx="2"/><path d="M19 39h10M24 33v6M17 15l8 8 8-8"/></svg>
+          </div>
+          <span>03</span><h3>TV & entertainment</h3>
+          <p>YouTube · Kinopoisk</p>
+          <b class="learn">Open guide →</b>
+        </button>
+
+        <button class="guide-card" data-modal="doors" type="button">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 40V8h24v32M18 40V14h12v26M27 27h2"/><rect x="31" y="28" width="10" height="9" rx="2"/><path d="M33 28v-3a3 3 0 0 1 6 0v3"/></svg>
+          </div>
+          <span>04</span><h3>Doors & security</h3>
+          <p>Lock doors and the gate before leaving</p>
+          <b class="learn">Open guide →</b>
+        </button>
+
+        <button class="guide-card" data-modal="utilities" type="button">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6v15M24 27v15M17 13l7-7 7 7M17 35l7 7 7-7"/><path d="M10 24h8M30 24h8"/><path d="M10 18c-2 2-3 4-3 6s1 4 3 6M38 18c2 2 3 4 3 6s-1 4-3 6"/></svg>
+          </div>
+          <span>05</span><h3>Electricity & water</h3>
+          <p>Meter near the pool · water needs power</p>
+          <b class="learn">Open guide →</b>
+        </button>
+
+        <button class="guide-card" data-modal="rules" type="button">
+          <div class="card-icon">
+            <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><path d="M24 14v11l7 4M16 37l-3 5M32 37l3 5"/></svg>
+          </div>
+          <span>06</span><h3>Villa rules</h3>
+          <p>Quiet after 22:00 · save electricity</p>
+          <b class="learn">Open guide →</b>
+        </button>
+      </div>
+    </section>
+
+    <div class="modal-layer" id="modal-layer" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+
+      <section class="villa-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" data-close aria-label="Close">×</button>
+        <div class="modal-symbol" id="modal-symbol"></div>
+        <p class="eyebrow" id="modal-eyebrow">EMPATY VILLA</p>
+        <h2 id="modal-title">Villa guide</h2>
+        <div id="modal-content"></div>
+      </section>
+    </div>
+
+    <section class="gallery section">
+      <div class="section-heading">
+        <p class="eyebrow">THE SPACE</p>
+        <h2>Empathy Villa</h2>
+      </div>
+      <div class="gallery-grid">
+        <img src="assets/villa-1.jpeg" alt="Empathy Villa living and kitchen area">
+        <img src="assets/villa-2.jpeg" alt="Empathy Villa living room">
+        <img src="assets/villa-3.jpeg" alt="Empathy Villa kitchen and bar">
+        <img src="assets/villa-4.jpeg" alt="Empathy Villa kitchen">
+      </div>
+    </section>
+
+    <section id="help" class="section help">
+      <div class="help-inner">
+        <p class="eyebrow">EMERGENCY</p>
+        <h2>Emergency contacts</h2>
+        <p>For emergencies in Badung Regency, use the local emergency services below.</p>
+
+        <div class="emergency-grid">
+          <a class="emergency-card" href="tel:112">
+            <span>ALL EMERGENCIES</span><strong>112</strong><small>Badung Emergency Call Center</small>
+          </a>
+          <a class="emergency-card" href="tel:119">
+            <span>MEDICAL</span><strong>119</strong><small>Emergency medical service</small>
+          </a>
+          <a class="emergency-card" href="tel:+6281139919119">
+            <span>TAKSU BADUNG</span><strong>+62 811-3991-9119</strong><small>24-hour emergency health service</small>
+          </a>
+          <a class="emergency-card" href="tel:+628113894000">
+            <span>BPBD BADUNG</span><strong>0811-3894-000</strong><small>Disaster response hotline</small>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section qr-section">
+      <div class="qr-placeholder">
+        <p class="eyebrow">QUICK ACCESS</p>
+        <h2>Villa QR code</h2>
+        <p>Scan to open the Empathy Villa guide.</p>
+        <img class="qr-image" src="assets/empathy-villa-qr.png" alt="QR code for Empathy Villa">
+        <p class="small">This QR currently opens the local website folder. We will replace it with the permanent online link after publishing.</p>
+      </div>
+    </section>
+  
+<script>
+const villaGuides = {
+  ac: {
+    eyebrow: "COMFORT",
+    title: "Air conditioning",
+    icon: "❄",
+    body: `<p>Empathy Villa uses <strong>Midea</strong> air conditioners.</p>
+           <div class="instruction"><span>01</span><div><strong>Set the temperature</strong><p>Please keep the room temperature at <strong>20°C</strong>.</p></div></div>
+           <div class="instruction"><span>02</span><div><strong>Close doors and windows</strong><p>This helps the room cool efficiently and saves electricity.</p></div></div>
+           <div class="tip">Tip · Please switch the AC off when leaving the room.</div>`
+  },
+  kitchen: {
+    eyebrow: "COOK & LIVE",
+    title: "Kitchen",
+    icon: "⌂",
+    body: `<p>The kitchen is equipped for everyday cooking and laundry.</p>
+           <div class="feature-list"><div>💧 <strong>Water cooler</strong><small>For drinking water.</small></div>
+           <div>🧺 <strong>Washing machine</strong><small>Available in the kitchen area.</small></div>
+           <div>🔥 <strong>Stove</strong><small>For cooking meals.</small></div>
+           <div>🍳 <strong>Cooking equipment</strong><small>Cookware and essentials are available.</small></div></div>`
+  },
+  tv: {
+    eyebrow: "RELAX",
+    title: "TV & entertainment",
+    icon: "▶",
+    body: `<p>Enjoy the TV and the available streaming services.</p>
+           <div class="instruction"><span>01</span><div><strong>YouTube</strong><p>Open YouTube from the TV apps menu.</p></div></div>
+           <div class="instruction"><span>02</span><div><strong>Kinopoisk</strong><p>Kinopoisk is also available on the TV.</p></div></div>`
+  },
+  doors: {
+    eyebrow: "SECURITY",
+    title: "Doors & gate",
+    icon: "⌕",
+    body: `<p>Please help keep Empathy Villa secure.</p>
+           <div class="security-rule"><strong>Before leaving</strong><p>Close and lock all villa doors.</p></div>
+           <div class="security-rule"><strong>Don't forget the gate</strong><p>Put the lock on the gate whenever you leave.</p></div>`
+  },
+  utilities: {
+    eyebrow: "ESSENTIALS",
+    title: "Electricity & water",
+    icon: "ϟ",
+    body: `<div class="utility-box"><strong>⚡ Electricity</strong><p>Electricity is paid using the meter located near the pool.</p></div>
+           <div class="utility-box"><strong>💧 Water</strong><p>The water system works only when electricity is available.</p></div>
+           <div class="tip">Tip · Keep electricity available when water is needed.</div>`
+  },
+  rules: {
+    eyebrow: "PLEASE REMEMBER",
+    title: "Villa rules",
+    icon: "22",
+    body: `<div class="rule-big"><strong>22:00</strong><span>Quiet hours begin</span></div>
+           <div class="instruction"><span>01</span><div><strong>Keep the villa quiet after 22:00</strong><p>Please be considerate of neighbours.</p></div></div>
+           <div class="instruction"><span>02</span><div><strong>Save electricity</strong><p>Switch off lights, AC and appliances when they are not needed.</p></div></div>`
+  }
+};
+
+const layer = document.getElementById("modal-layer");
+const title = document.getElementById("modal-title");
+const eyebrow = document.getElementById("modal-eyebrow");
+const symbol = document.getElementById("modal-symbol");
+const content = document.getElementById("modal-content");
+
+document.querySelectorAll("[data-modal]").forEach(card => {
+  card.addEventListener("click", () => {
+    const guide = villaGuides[card.dataset.modal];
+    eyebrow.textContent = guide.eyebrow;
+    title.textContent = guide.title;
+    symbol.textContent = guide.icon;
+    content.innerHTML = guide.body;
+    layer.classList.add("open");
+    layer.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  });
+});
+
+function closeVillaModal() {
+  layer.classList.remove("open");
+  layer.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+}
+document.querySelectorAll("[data-close]").forEach(el => el.addEventListener("click", closeVillaModal));
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeVillaModal(); });
+</script>
+
+</main>
+
+  <footer>
+    <strong>EMPATHY VILLA</strong>
+    <span>Personal villa guide · Bali</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
